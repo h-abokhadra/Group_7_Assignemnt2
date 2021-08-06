@@ -17,8 +17,6 @@ namespace Group_7_Assignemnt2
         //Backend Connection
         SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-ME5NTSG; Initial Catalog = STORE_PRODUCTS; Integrated Security = True");
 
-        con.ConnectionString = 
-
         public Login()
         {
             InitializeComponent();
@@ -49,7 +47,7 @@ namespace Group_7_Assignemnt2
             int i = 0;
             SqlCommand command = con.CreateCommand();
             command.CommandType = CommandType.Text;
-            command.CommandText = "select * from USERS where username = '" +textBox1.Text + "' and password='" + textBox2.Text + "'";
+            command.CommandText = "select * from USERS where USERID = '" +textBox1.Text + "' and USERPASSWORD ='" + textBox2.Text + "'";
             command.ExecuteNonQuery();
             DataTable DT = new DataTable();
             SqlDataAdapter DA = new SqlDataAdapter(command);
@@ -64,6 +62,9 @@ namespace Group_7_Assignemnt2
             }
             else
             {
+                this.Hide(); //hiding the Login Form
+                Purchase purchase = new Purchase(); // Showing the Purchase form
+                purchase.ShowDialog();
 
             }
 
