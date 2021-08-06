@@ -13,6 +13,12 @@ namespace Group_7_Assignemnt2
 {
     public partial class Login : Form
     {
+
+        //Backend Connection
+        SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-ME5NTSG; Initial Catalog = STORE_PRODUCTS; Integrated Security = True");
+
+        con.ConnectionString = 
+
         public Login()
         {
             InitializeComponent();
@@ -30,25 +36,38 @@ namespace Group_7_Assignemnt2
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            if (con.State == ConnectionState.Open)
+            {
+                con.Close();
+            }
+            con.Open();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Backend Connection
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = @"Data Source = DESKTOP-ME5NTSG; Initial Catalog = STORE_PRODUCTS; Integrated Security = True";
 
-            //Opening the connection
-            con.Open();
-
-            //Getting data
-
-            SqlDataAdapter SQLCMD = new SqlDataAdapter("Select * from USERS", con);
-
+            int i = 0;
+            SqlCommand command = con.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = "select * from USERS where username = '" +textBox1.Text + "' and password='" + textBox2.Text + "'";
+            command.ExecuteNonQuery();
             DataTable DT = new DataTable();
+            SqlDataAdapter DA = new SqlDataAdapter(command);
+            DA.Fill(DT);
+            i = Convert.ToInt32(DT.Rows.Count.ToString());
 
-            SQLCMD.Fill(DT);
+            if(i == 0)
+            {
+
+                MessageBox.Show("Invalid Username or Password");
+
+            }
+            else
+            {
+
+            }
+
+           
         }
     }
 }
