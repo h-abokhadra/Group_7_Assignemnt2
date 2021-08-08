@@ -57,7 +57,7 @@ namespace Group_7_Assignemnt2
             if(i == 0)
             {
 
-                MessageBox.Show("Invalid Username or Password");
+                MessageBox.Show("Invalid Username or Password .. Please try again! ", "Warning! ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
@@ -69,6 +69,11 @@ namespace Group_7_Assignemnt2
             }
 
            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
