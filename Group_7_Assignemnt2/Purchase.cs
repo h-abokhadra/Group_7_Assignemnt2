@@ -38,6 +38,19 @@ namespace Group_7_Assignemnt2
             DA.Fill(DT);
             dataGridView1.DataSource = DT;
 
+            DataGridViewTextBoxColumn txt = new DataGridViewTextBoxColumn();
+
+            txt.HeaderText = "Insert Quantity";
+            txt.Name = "txt";
+            dataGridView1.Columns.Add(txt);
+
+
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "Add to Cart";
+            btn.Text = "Click to Add!";
+            btn.Name = "btn";
+            dataGridView1.Columns.Add(btn);
+
             con.Close();
 
         }
@@ -72,11 +85,21 @@ namespace Group_7_Assignemnt2
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "Cart";
             btn.Text = "Add to Cart";
             btn.Name = "btn";
             dataGridView1.Columns.Add(btn);
 
 
         }
+
+     /*   private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 6){
+
+               MessageBox.Show (e.ColumnIndex.)
+        }*/
+
+
     }
 }
