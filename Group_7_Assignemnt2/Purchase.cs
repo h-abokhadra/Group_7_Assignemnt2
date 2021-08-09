@@ -44,6 +44,7 @@ namespace Group_7_Assignemnt2
             txt.Name = "txt";
             dataGridView1.Columns.Add(txt);
             
+            // Button to add to cart 
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Add to Cart";
