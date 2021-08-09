@@ -43,14 +43,14 @@ namespace Group_7_Assignemnt2
             txt.HeaderText = "Insert Quantity";
             txt.Name = "txt";
             dataGridView1.Columns.Add(txt);
-
+            
 
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.HeaderText = "Add to Cart";
             btn.Text = "Click to Add!";
             btn.Name = "btn";
             dataGridView1.Columns.Add(btn);
-
+            btn.UseColumnTextForButtonValue = true;
             con.Close();
 
         }
@@ -85,6 +85,7 @@ namespace Group_7_Assignemnt2
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            
             btn.HeaderText = "Cart";
             btn.Text = "Add to Cart";
             btn.Name = "btn";
