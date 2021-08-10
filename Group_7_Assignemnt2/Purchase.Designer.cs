@@ -133,7 +133,7 @@ namespace Group_7_Assignemnt2
             this.Quantity,
             this.UPrice,
             this.ToPrice});
-            this.dataGridView2.Location = new System.Drawing.Point(115, 309);
+            this.dataGridView2.Location = new System.Drawing.Point(115, 329);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(543, 168);
             this.dataGridView2.TabIndex = 8;

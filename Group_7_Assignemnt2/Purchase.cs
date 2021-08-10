@@ -16,15 +16,16 @@ namespace Group_7_Assignemnt2
         SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-ME5NTSG; Initial Catalog = STORE_PRODUCTS; Integrated Security = True");
         DataTable table = new DataTable();
 
+        int num = 0;
+        string product;
+        int uprice, toprice, qty;
 
         public Purchase()
         {
             InitializeComponent();
         }
 
-        int num = 0;
-        string product;
-        int uprice, toprice, qty;
+       
 
         private void Purchase_Load(object sender, EventArgs e)
         {
@@ -43,6 +44,7 @@ namespace Group_7_Assignemnt2
 
             dataGridView1.DataSource = DT;
 
+
             table.Columns.Add("Num", typeof(int));
             table.Columns.Add("Product", typeof(string));
             table.Columns.Add("Quantity", typeof(int));
@@ -51,7 +53,7 @@ namespace Group_7_Assignemnt2
 
             dataGridView2.DataSource = table;
 
-         //   con.Close();
+            con.Close();
 
         }
 
@@ -108,7 +110,8 @@ namespace Group_7_Assignemnt2
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+            dataGridView2.DataSource = table;
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -137,7 +140,7 @@ namespace Group_7_Assignemnt2
                 num = num + 1;
                 qty = Convert.ToInt32(textBox2.Text);
                 toprice = qty * uprice;
-                table.Rows.Add(num, qty, uprice, toprice);
+                table.Rows.Add(num, product, qty, uprice, toprice);
                 dataGridView2.DataSource = table;
                 flag = 0;
 
