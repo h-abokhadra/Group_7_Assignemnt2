@@ -21,6 +21,10 @@ namespace Group_7_Assignemnt2
             InitializeComponent();
         }
 
+        int num = 0;
+        string product;
+        int uprice, toprice, qty;
+
         private void Purchase_Load(object sender, EventArgs e)
         {
             if (con.State == ConnectionState.Open)
@@ -54,6 +58,7 @@ namespace Group_7_Assignemnt2
             DataTable DT = new DataTable();
 
             DA.Fill(DT);
+           
             dataGridView1.DataSource = DT;
 
             con.Close();
@@ -80,6 +85,21 @@ namespace Group_7_Assignemnt2
 
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        int flag = 0;
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            product = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            qty = Convert.ToInt32(textBox2.Text);
+            uprice = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
+            toprice = qty * uprice;
+            flag = 1;
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -87,7 +107,16 @@ namespace Group_7_Assignemnt2
 
         private void button3_Click(object sender, EventArgs e)
         {
+             if (textBox2.Text == "")
+            {
 
+                MessageBox.Show("Please enter the quantity ");
+
+                else
+                {
+
+                }
+            }
         }
     }
 }
