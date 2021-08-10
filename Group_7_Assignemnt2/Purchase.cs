@@ -61,7 +61,6 @@ namespace Group_7_Assignemnt2
         {
 
             String query = "select * from [dbo].[PRODUCTS] where PRD_NAME like '" + textBox1.Text + "%'";
-            con.Open();
             SqlCommand command = new SqlCommand(query, con);
 
             SqlDataAdapter DA = new SqlDataAdapter(command);
@@ -87,7 +86,7 @@ namespace Group_7_Assignemnt2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("The total amount for your purchase is: ", "Thank you! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"The total amount for your purchase is: {sum}", "Thank you! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void label2_Click(object sender, EventArgs e)
