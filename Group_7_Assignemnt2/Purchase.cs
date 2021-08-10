@@ -50,8 +50,7 @@ namespace Group_7_Assignemnt2
             table.Columns.Add("Uprice", typeof(int));
             table.Columns.Add("ToPrice", typeof(int));
 
-
-            con.Close();
+            dataGridView2.DataSource = table;
 
         }
 

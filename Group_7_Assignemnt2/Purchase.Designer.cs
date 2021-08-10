@@ -38,11 +38,6 @@ namespace Group_7_Assignemnt2
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ToPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -128,41 +123,10 @@ namespace Group_7_Assignemnt2
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Num,
-            this.Product,
-            this.Quantity,
-            this.UPrice,
-            this.ToPrice});
             this.dataGridView2.Location = new System.Drawing.Point(115, 329);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(543, 168);
             this.dataGridView2.TabIndex = 8;
-            // 
-            // Num
-            // 
-            this.Num.HeaderText = "Num";
-            this.Num.Name = "Num";
-            // 
-            // Product
-            // 
-            this.Product.HeaderText = "Product";
-            this.Product.Name = "Product";
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.Name = "Quantity";
-            // 
-            // UPrice
-            // 
-            this.UPrice.HeaderText = "UPrice";
-            this.UPrice.Name = "UPrice";
-            // 
-            // ToPrice
-            // 
-            this.ToPrice.HeaderText = "TotalPrice";
-            this.ToPrice.Name = "ToPrice";
             // 
             // label3
             // 
@@ -218,11 +182,6 @@ namespace Group_7_Assignemnt2
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ToPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
     }
