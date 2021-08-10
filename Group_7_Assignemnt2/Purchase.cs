@@ -14,6 +14,7 @@ namespace Group_7_Assignemnt2
     public partial class Purchase : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-ME5NTSG; Initial Catalog = STORE_PRODUCTS; Integrated Security = True");
+        DataTable table = new DataTable();
 
 
         public Purchase()
@@ -42,7 +43,15 @@ namespace Group_7_Assignemnt2
             DA.Fill(DT);
             dataGridView1.DataSource = DT;
 
-            con.Close();
+            table.Columns.Add("Num", typeof(int));
+            table.Columns.Add("Product", typeof(string));
+            table.Columns.Add("Quantity", typeof(int));
+            table.Columns.Add("Uprice", typeof(int));
+            table.Columns.Add("ToPrice", typeof(int));
+
+            dataGridView2.DataSource = table;
+
+         //   con.Close();
 
         }
 
@@ -84,20 +93,22 @@ namespace Group_7_Assignemnt2
         {
 
         }
+        int flag = 0;
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+           // MessageBox.Show("bingo");
+            product = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+            // qty = Convert.ToInt32(textBox2.Text);
+            uprice = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[4].Value.ToString());
+            // toprice = qty * uprice;
+            flag = 1;
         }
 
-        int flag = 0;
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            product = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
-            qty = Convert.ToInt32(textBox2.Text);
-            uprice = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[3].Value.ToString());
-            toprice = qty * uprice;
-            flag = 1;
+          
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -105,18 +116,36 @@ namespace Group_7_Assignemnt2
 
         }
 
+        int sum = 0;
         private void button3_Click(object sender, EventArgs e)
         {
-             if (textBox2.Text == "")
+           
+            if (textBox2.Text == "")
             {
 
                 MessageBox.Show("Please enter the quantity ");
+            }
 
-                else
-                {
+            else if (flag == 0)
+            {
+                MessageBox.Show("Please select a product to add to cart ");
 
-                }
+            }
+            else
+            {
+
+                num = num + 1;
+                qty = Convert.ToInt32(textBox2.Text);
+                toprice = qty * uprice;
+                table.Rows.Add(num, qty, uprice, toprice);
+                dataGridView2.DataSource = table;
+                flag = 0;
+
+            }
+
+           // sum = sum + toprice;
+
             }
         }
     }
-}
+

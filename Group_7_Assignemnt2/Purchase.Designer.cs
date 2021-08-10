@@ -83,6 +83,7 @@ namespace Group_7_Assignemnt2
             this.dataGridView1.Size = new System.Drawing.Size(543, 164);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
