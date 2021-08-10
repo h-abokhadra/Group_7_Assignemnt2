@@ -43,6 +43,8 @@ namespace Group_7_Assignemnt2
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ToPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +85,6 @@ namespace Group_7_Assignemnt2
             this.dataGridView1.Size = new System.Drawing.Size(543, 164);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
@@ -137,7 +138,6 @@ namespace Group_7_Assignemnt2
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(543, 168);
             this.dataGridView2.TabIndex = 8;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // Num
             // 
@@ -164,11 +164,31 @@ namespace Group_7_Assignemnt2
             this.ToPrice.HeaderText = "TotalPrice";
             this.ToPrice.Name = "ToPrice";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(382, 523);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(13, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "$";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(267, 522);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Total Price";
+            // 
             // Purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 744);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);
@@ -203,5 +223,7 @@ namespace Group_7_Assignemnt2
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn UPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn ToPrice;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }

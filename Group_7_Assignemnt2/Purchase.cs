@@ -44,19 +44,19 @@ namespace Group_7_Assignemnt2
 
             dataGridView1.DataSource = DT;
 
-
             table.Columns.Add("Num", typeof(int));
             table.Columns.Add("Product", typeof(string));
             table.Columns.Add("Quantity", typeof(int));
             table.Columns.Add("Uprice", typeof(int));
             table.Columns.Add("ToPrice", typeof(int));
 
-            dataGridView2.DataSource = table;
 
             con.Close();
 
         }
 
+        //This a comment
+        
         //Method for Search function
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -110,7 +110,6 @@ namespace Group_7_Assignemnt2
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            dataGridView2.DataSource = table;
 
         }
 
@@ -146,7 +145,8 @@ namespace Group_7_Assignemnt2
 
             }
 
-           // sum = sum + toprice;
+           sum = sum + toprice;
+           label3.Text = "$ " + sum.ToString();
 
             }
         }
