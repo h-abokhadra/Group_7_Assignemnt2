@@ -81,7 +81,7 @@ namespace Group_7_Assignemnt2
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
@@ -95,7 +95,7 @@ namespace Group_7_Assignemnt2
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(178, 146);
             this.button2.Name = "button2";
@@ -107,7 +107,7 @@ namespace Group_7_Assignemnt2
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(51, 146);
             this.button1.Name = "button1";
@@ -134,7 +134,7 @@ namespace Group_7_Assignemnt2
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.label3.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(219, 61);
             this.label3.Name = "label3";
@@ -258,6 +258,7 @@ namespace Group_7_Assignemnt2
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.pictureBox1.Image = global::Group_7_Assignemnt2.Properties.Resources.images;
             this.pictureBox1.Location = new System.Drawing.Point(36, 133);
             this.pictureBox1.Name = "pictureBox1";
