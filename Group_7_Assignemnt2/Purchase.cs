@@ -39,8 +39,8 @@ namespace Group_7_Assignemnt2
 
             SqlDataAdapter DA = new SqlDataAdapter(command);
             DataTable DT = new DataTable();
-
             DA.Fill(DT);
+
             dataGridView1.DataSource = DT;
 
             table.Columns.Add("Num", typeof(int));
