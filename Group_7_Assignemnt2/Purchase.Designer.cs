@@ -74,6 +74,7 @@ namespace Group_7_Assignemnt2
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(115, 91);
             this.dataGridView1.Name = "dataGridView1";
@@ -122,6 +123,7 @@ namespace Group_7_Assignemnt2
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(115, 329);
             this.dataGridView2.Name = "dataGridView2";
@@ -150,6 +152,9 @@ namespace Group_7_Assignemnt2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackgroundImage = global::Group_7_Assignemnt2.Properties.Resources.p_448_pai_058_chim;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(801, 744);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
