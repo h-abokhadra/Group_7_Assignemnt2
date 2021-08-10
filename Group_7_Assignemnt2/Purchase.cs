@@ -38,24 +38,11 @@ namespace Group_7_Assignemnt2
             DA.Fill(DT);
             dataGridView1.DataSource = DT;
 
-            DataGridViewTextBoxColumn txt = new DataGridViewTextBoxColumn();
-
-            txt.HeaderText = "Insert Quantity";
-            txt.Name = "txt";
-            dataGridView1.Columns.Add(txt);
-            
-            // Button to add to cart 
-
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            btn.HeaderText = "Add to Cart";
-            btn.Text = "Click to Add!";
-            btn.Name = "btn";
-            dataGridView1.Columns.Add(btn);
-            btn.UseColumnTextForButtonValue = true;
             con.Close();
 
         }
 
+        //Method for Search function
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -83,25 +70,24 @@ namespace Group_7_Assignemnt2
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            
-            btn.HeaderText = "Cart";
-            btn.Text = "Add to Cart";
-            btn.Name = "btn";
-            dataGridView1.Columns.Add(btn);
+            MessageBox.Show("The total amount for your purchase is: ", "Thank you! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
 
-     /*   private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (e.ColumnIndex == 6){
 
-               MessageBox.Show (e.ColumnIndex.)
-        }*/
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
