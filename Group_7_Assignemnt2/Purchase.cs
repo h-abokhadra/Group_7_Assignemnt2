@@ -47,8 +47,8 @@ namespace Group_7_Assignemnt2
             table.Columns.Add("Num", typeof(int));
             table.Columns.Add("Product", typeof(string));
             table.Columns.Add("Quantity", typeof(int));
-            table.Columns.Add("Uprice", typeof(int));
-            table.Columns.Add("ToPrice", typeof(int));
+            table.Columns.Add("Unit price", typeof(int));
+            table.Columns.Add("Total Price", typeof(int));
 
             dataGridView2.DataSource = table;
 
@@ -86,7 +86,8 @@ namespace Group_7_Assignemnt2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"The total amount for your purchase is: {sum}", "Thank you! ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"The total amount for your purchase is: {sum}$", "Thank you! ^^ ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Exit();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -112,6 +113,11 @@ namespace Group_7_Assignemnt2
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

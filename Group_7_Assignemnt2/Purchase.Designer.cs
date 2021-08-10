@@ -69,7 +69,7 @@ namespace Group_7_Assignemnt2
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(608, 630);
+            this.button1.Location = new System.Drawing.Point(587, 630);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 26);
             this.button1.TabIndex = 3;
@@ -81,18 +81,19 @@ namespace Group_7_Assignemnt2
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(96, 86);
+            this.dataGridView1.Location = new System.Drawing.Point(105, 119);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(589, 216);
+            this.dataGridView1.Size = new System.Drawing.Size(559, 185);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(464, 630);
+            this.button2.Location = new System.Drawing.Point(447, 630);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 26);
             this.button2.TabIndex = 4;
@@ -137,9 +138,9 @@ namespace Group_7_Assignemnt2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(96, 401);
+            this.dataGridView2.Location = new System.Drawing.Point(105, 396);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(589, 168);
+            this.dataGridView2.Size = new System.Drawing.Size(559, 168);
             this.dataGridView2.TabIndex = 8;
             // 
             // label3
@@ -171,7 +172,7 @@ namespace Group_7_Assignemnt2
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.BackgroundImage = global::Group_7_Assignemnt2.Properties.Resources.p_448_pai_058_chim;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(801, 744);
+            this.ClientSize = new System.Drawing.Size(801, 688);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridView2);
