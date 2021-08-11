@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+//This Form Page is for the user to create a secured login form that verify that the username and password are correct.
+//Author: Hoda Abokhadra, August, 2021
+
 namespace Group_7_Assignemnt2
 {
     public partial class Login : Form
     {
-
         //Backend Connection
         SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-ME5NTSG; Initial Catalog = STORE_PRODUCTS; Integrated Security = True");
 
@@ -32,6 +34,7 @@ namespace Group_7_Assignemnt2
 
         }
 
+        //Setting the connection status
         private void Login_Load(object sender, EventArgs e)
         {
             if (con.State == ConnectionState.Open)
@@ -41,6 +44,7 @@ namespace Group_7_Assignemnt2
             con.Open();
         }
 
+        //This method is getting the user input for the username and password and verifiyng them with the info stored in the USERS table
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -56,13 +60,14 @@ namespace Group_7_Assignemnt2
 
             if(i == 0)
             {
-
+                //Displaying a warning message to the user when entering wrong inputs
                 MessageBox.Show("Invalid Username or Password .. Please try again! ", "Warning! ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
             else
             {
-                this.Hide(); //hiding the Login Form
+
+                this.Hide(); //hiding the Login Form when entering correct inputs
                 Purchase purchase = new Purchase(); // Showing the Purchase form
                 purchase.ShowDialog();
 
@@ -71,6 +76,7 @@ namespace Group_7_Assignemnt2
            
         }
 
+        //terminating the applicaton by clicking EXIT
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
