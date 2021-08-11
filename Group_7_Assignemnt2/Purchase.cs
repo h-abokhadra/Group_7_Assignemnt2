@@ -36,12 +36,13 @@ namespace Group_7_Assignemnt2
         
         private void Purchase_Load(object sender, EventArgs e)
         {
-            if (con.State == ConnectionState.Open)
+            if (con.State == ConnectionState.Open) //setting the connections status
             {
                 con.Close();
             }
             con.Open();
 
+            //Query for displaying all the products in DataGridView1 using the backend connection
             String query = "select * from [dbo].[PRODUCTS]";
             SqlCommand command = new SqlCommand(query, con);
 
@@ -51,6 +52,7 @@ namespace Group_7_Assignemnt2
 
             dataGridView1.DataSource = DT;
 
+            //Adding the table columns for displaying the cart
             table.Columns.Add("Num", typeof(int));
             table.Columns.Add("Product", typeof(string));
             table.Columns.Add("Quantity", typeof(int));
@@ -79,7 +81,7 @@ namespace Group_7_Assignemnt2
 
             con.Close();
         }
-
+        //Exit button terminate the application
         private void button1_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
@@ -91,6 +93,7 @@ namespace Group_7_Assignemnt2
 
         }
 
+        //Button2 (checkout) Display the total (sum) for the user once he clicks it 
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"The total amount for your purchase is: {sum}$", "Thank you! ^^ ", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -101,8 +104,10 @@ namespace Group_7_Assignemnt2
         {
 
         }
+
         int flag = 0;
 
+        //This method for storing the values of the product the user has clicked to add to cart
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -129,7 +134,11 @@ namespace Group_7_Assignemnt2
 
         }
 
+        //initializing the sum variable for storing the total amoun of the cart
+
         int sum = 0;
+
+        //Verifiying that the user will select a product before adding the quantity to the cart and that the user enters the amount as well
         private void button3_Click(object sender, EventArgs e)
         {
            
@@ -146,6 +155,7 @@ namespace Group_7_Assignemnt2
             }
             else
             {
+                //adding the item or the product that the user selected into the cart bi displaying it in DataGridView2
 
                 num = num + 1;
                 qty = Convert.ToInt32(textBox2.Text);
@@ -155,7 +165,7 @@ namespace Group_7_Assignemnt2
                 flag = 0;
 
             }
-
+            // calculating and displaying the sum to the user
            sum = sum + toprice;
            label3.Text = "$ " + sum.ToString();
 
