@@ -9,13 +9,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+
+//This Form Page is for the user to create a purchace using DataGridView property.
+//Author: Hoda Abokhadra, August, 2021
+
 namespace Group_7_Assignemnt2
 {
     public partial class Purchase : Form
-    {
+    {   
+        //Creating the Database connection
         SqlConnection con = new SqlConnection(@"Data Source = DESKTOP-ME5NTSG; Initial Catalog = STORE_PRODUCTS; Integrated Security = True");
+        //Table to display the cart to the user
         DataTable table = new DataTable();
 
+        //initializing vriables to store the value in the cart table
         int num = 0;
         string product;
         int uprice, toprice, qty;
@@ -26,7 +33,7 @@ namespace Group_7_Assignemnt2
         }
 
        
-
+        
         private void Purchase_Load(object sender, EventArgs e)
         {
             if (con.State == ConnectionState.Open)
