@@ -124,6 +124,7 @@ namespace Group_7_Assignemnt2
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(168, 27);
             this.textBox2.TabIndex = 3;
+            this.textBox2.UseSystemPasswordChar = true;
             // 
             // textBox1
             // 
@@ -225,6 +226,7 @@ namespace Group_7_Assignemnt2
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
